@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_searchFav"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_search"
+        android:actionViewClass="com.actionbarsherlock.widget.SearchView"
+        android:title="@string/action_settings"/>
+    
+</menu>

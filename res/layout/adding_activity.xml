@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bawono_cookit_background" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <AbsoluteLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:background="@android:drawable/list_selector_background" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:gravity="bottom|right" >
+
+                    <Button
+                        android:id="@+id/button_set_image"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custombuttongreen2"
+                        android:text="@string/set_image"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:onClick="onClickSetImage"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </AbsoluteLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textView_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".4"
+                        android:gravity="right"
+                        android:text="@string/name"
+                        android:textSize="18sp"
+                        android:textColor="#669900"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textView_author"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".4"
+                        android:gravity="right"
+                        android:text="@string/author"
+                        android:textSize="18sp"
+                        android:textColor="#669900"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_author"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textView_comment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".4"
+                        android:gravity="right"
+                        android:text="@string/comment"
+                        android:textSize="18sp"
+                        android:textColor="#669900"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_comment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:inputType="textMultiLine"
+                        android:maxLength="100"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textView_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".4"
+                        android:gravity="right"
+                        android:text="@string/type"
+                        android:textSize="18sp"
+                        android:textColor="#669900"
+                        android:typeface="serif" />
+
+                    <Spinner
+                        android:id="@+id/spinner_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:entries="@array/dish_types"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/textView_type2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:enabled="false"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:typeface="serif"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textView_difficulty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".4"
+                        android:gravity="right"
+                        android:text="@string/difficulty"
+                        android:textSize="18sp"
+                        android:textColor="#669900"
+                        android:typeface="serif" />
+
+                    <Spinner
+                        android:id="@+id/spinner_difficulty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:entries="@array/dish_difficulty"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/textView_difficulty2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:enabled="false"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:typeface="serif"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textView_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".4"
+                        android:gravity="right"
+                        android:text="@string/duration"
+                        android:textSize="18sp"
+                        android:textColor="#669900"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:inputType="textMultiLine"
+                        android:maxLength="30"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/textView_ingredients"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ingredients"
+                    android:textSize="18sp"
+                    android:textColor="#669900"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/editText_ingredients"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView_directions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/directions"
+                    android:textSize="18sp"
+                    android:textColor="#669900"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/editText_directions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView_notes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notes"
+                    android:textSize="18sp"
+                    android:textColor="#669900"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/editText_notes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="10dp" >
+
+                <Button
+                    android:id="@+id/button_save"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custombuttongreen"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:typeface="serif" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
